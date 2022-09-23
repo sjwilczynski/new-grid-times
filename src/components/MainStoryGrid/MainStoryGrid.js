@@ -49,6 +49,21 @@ const Wrapper = styled.div`
     "advertisement";
   gap: 48px;
   margin-bottom: 48px;
+
+  @media ${(p) => p.theme.queries.tabletAndUp} {
+    grid-template-areas:
+      "main-story secondary-stories"
+      "advertisement advertisement"
+      "opinion-stories opinion-stories";
+    grid-template-columns: 2fr 1fr;
+  }
+
+  @media ${(p) => p.theme.queries.laptopAndUp} {
+    grid-template-areas:
+      "main-story secondary-stories opinion-stories"
+      "main-story advertisement advertisement";
+    grid-template-columns: 2fr 1.3fr 1fr;
+  }
 `;
 
 const MainStorySection = styled.section`
