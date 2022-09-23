@@ -102,6 +102,7 @@ const MainHeader = styled(MaxWidthWrapper)`
 
 const ButtonContainer = styled(LaptopAndUpContainer)`
   justify-self: end;
+  align-self: end;
   text-align: center;
   flex-direction: column;
   gap: 8px;
