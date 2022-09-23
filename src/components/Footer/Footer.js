@@ -1,9 +1,9 @@
-import React from 'react';
-import { Twitter, Facebook } from 'react-feather';
-import styled from 'styled-components/macro';
-import MaxWidthWrapper from '../MaxWidthWrapper';
+import React from "react";
+import { Twitter, Facebook } from "react-feather";
+import styled from "styled-components/macro";
+import MaxWidthWrapper from "../MaxWidthWrapper";
 
-import VisuallyHidden from '../VisuallyHidden';
+import VisuallyHidden from "../VisuallyHidden";
 
 const Footer = () => {
   return (
@@ -25,15 +25,11 @@ const Footer = () => {
           </nav>
           <Social>
             <a href="/">
-              <VisuallyHidden>
-                Visit The Grid Times on Facebook
-              </VisuallyHidden>
+              <VisuallyHidden>Visit The Grid Times on Facebook</VisuallyHidden>
               <Facebook size={20} />
             </a>
             <a href="/">
-              <VisuallyHidden>
-                Visit The Grid Times on Twitter
-              </VisuallyHidden>
+              <VisuallyHidden>Visit The Grid Times on Twitter</VisuallyHidden>
               <Twitter size={20} />
             </a>
           </Social>
@@ -144,6 +140,16 @@ const TopRow = styled.div`
   font-size: 0.875rem;
   border-bottom: 1px solid var(--color-gray-700);
   padding: 24px 0;
+
+  @media ${(p) => p.theme.queries.tabletAndUp} {
+    flex-direction: row;
+    justify-content: center;
+    gap: 48px;
+  }
+
+  @media ${(p) => p.theme.queries.laptopAndUp} {
+    justify-content: end;
+  }
 `;
 
 const Social = styled.div`
@@ -170,6 +176,14 @@ const MainNavArea = styled.div`
   gap: 32px;
   padding: 32px 0 48px;
   text-align: center;
+
+  @media ${(p) => p.theme.queries.tabletAndUp} {
+    display: grid;
+    gap: 32px 80px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+    text-align: revert;
+  }
 `;
 
 const MainNavHeading = styled.h2`
