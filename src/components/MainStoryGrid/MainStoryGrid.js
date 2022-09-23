@@ -26,11 +26,11 @@ const MainStoryGrid = () => {
 
       <OpinionSection>
         <SectionTitle>Opinion</SectionTitle>
-        <StoryList>
+        <StoryListHorizontalOnTablet>
           {OPINION_STORIES.map((story, index) => (
             <OpinionStory key={story.id} {...story} />
           ))}
-        </StoryList>
+        </StoryListHorizontalOnTablet>
       </OpinionSection>
 
       <AdvertisementSection>
@@ -67,6 +67,18 @@ const StoryList = styled.div`
     margin-bottom: 16px;
     padding-bottom: 16px;
     border-bottom: 1px solid var(--color-gray-300);
+  }
+`;
+
+const StoryListHorizontalOnTablet = styled(StoryList)`
+  @media ${(p) => p.theme.queries.tabletOnly} {
+    flex-direction: row;
+    gap: 32px;
+    & > :not(:last-of-type) {
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+      border-bottom: none;
+    }
   }
 `;
 

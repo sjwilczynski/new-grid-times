@@ -21,6 +21,12 @@ const Wrapper = styled.article`
   gap: 4px 16px;
   grid-template-columns: 120px 1fr;
   color: var(--color-gray-900);
+
+  @media ${(p) => p.theme.queries.tabletOnly} {
+    grid-template-areas: "image" "heading" "abstract";
+    grid-template-columns: auto;
+    gap: 8px;
+  }
 `;
 
 const Image = styled.img`
