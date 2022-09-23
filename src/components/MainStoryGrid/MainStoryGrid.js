@@ -73,20 +73,17 @@ const MainStorySection = styled.section`
 
   @media ${(p) => p.theme.queries.tabletAndUp} {
     border-right: 2px solid var(--color-gray-300);
-    padding-right: 24px;
+    padding-right: 16px;
+    margin-right: 16px;
   }
 `;
 
 const SecondaryStorySection = styled.section`
   grid-area: secondary-stories;
-
-  @media ${(p) => p.theme.queries.tabletAndUp} {
-    padding-left: 24px;
-  }
-
   @media ${(p) => p.theme.queries.laptopAndUp} {
     border-right: 2px solid var(--color-gray-300);
-    padding-right: 24px;
+    padding-right: 16px;
+    margin-right: 16px;
   }
 `;
 
@@ -115,9 +112,6 @@ const StoryListHorizontalOnTablet = styled(StoryList)`
 
 const OpinionSection = styled.section`
   grid-area: opinion-stories;
-  @media ${(p) => p.theme.queries.laptopAndUp} {
-    padding-left: 24px;
-  }
 `;
 
 const AdvertisementSection = styled.section`
